@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static java.lang.Thread.sleep;
+
 
 public class SecondPage extends AppCompatActivity {
 
@@ -61,7 +63,7 @@ public class SecondPage extends AppCompatActivity {
         });
 
         jumping = (ImageButton) findViewById(R.id.jumping);
-        final ImageView mImageView = (ImageView) findViewById(R.id.imageV2);
+        final ImageView mImageView = (ImageView) findViewById(R.id.mImageV2);
 
         jumping.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +102,7 @@ public class SecondPage extends AppCompatActivity {
         });
 
         sleeping = (ImageButton) findViewById(R.id.sleeping);
-        final ImageView mImageView2 = (ImageView) findViewById(R.id.imageV3);
+        final ImageView mImageView2 = (ImageView) findViewById(R.id.mImageV3);
 
         sleeping.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +141,7 @@ public class SecondPage extends AppCompatActivity {
         });
 
         walking = (ImageButton) findViewById(R.id.walking);
-        final ImageView mImageView3 = (ImageView) findViewById(R.id.imageV);
+        final ImageView mImageView3 = (ImageView) findViewById(R.id.mImageV);
 
 
         walking.setOnClickListener(new View.OnClickListener() {
@@ -167,6 +169,8 @@ public class SecondPage extends AppCompatActivity {
                         .setInterpolator(new AccelerateDecelerateInterpolator())
                         .setDuration(250)
                         .start();
+
+
 
                 Animation a = AnimationUtils.loadAnimation(SecondPage.this, R.anim.visible);
                 mImageView3.startAnimation(a);
