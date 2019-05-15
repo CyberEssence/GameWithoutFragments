@@ -6,141 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        app:layout_constraintVertical_weight="2"
+        android:id="@+id/fragCount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <ImageButton
-        android:id="@+id/dir1"
-        android:layout_width="360dp"
-        android:layout_height="152dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
+        app:layout_constraintVertical_weight="1"
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dir2"
-        app:layout_constraintTop_toBottomOf="@+id/drinking"
-        app:srcCompat="@drawable/dir1" />
-
-    <ImageButton
-        android:id="@+id/dir2"
-        android:layout_width="342dp"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/dir1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drawing"
+        app:layout_constraintTop_toBottomOf="@+id/fragCount"
         app:srcCompat="@drawable/dir2" />
-
-    <TextView
-        android:id="@+id/question1"
-        android:layout_width="291dp"
-        android:layout_height="31dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="What picture does the boy eat?"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/eating"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/drawing"
-        android:layout_width="227dp"
-        android:layout_height="195dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/dir2"
-        app:layout_constraintEnd_toStartOf="@+id/eating"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question1"
-        app:srcCompat="@drawable/drawing" />
-
-    <ImageButton
-        android:id="@+id/drinking"
-        android:layout_width="228dp"
-        android:layout_height="195dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/dir1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eating"
-        app:layout_constraintTop_toBottomOf="@+id/question1"
-        app:srcCompat="@drawable/drinking" />
-
-    <ImageButton
-        android:id="@+id/eating"
-        android:layout_width="211dp"
-        android:layout_height="196dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/dir1"
-        app:layout_constraintEnd_toStartOf="@+id/drinking"
-        app:layout_constraintStart_toEndOf="@+id/drawing"
-        app:layout_constraintTop_toBottomOf="@+id/question1"
-        app:srcCompat="@drawable/eating" />
-
-    <ImageView
-        android:id="@+id/imageV"
-        android:layout_width="207dp"
-        android:layout_height="171dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:alpha="0"
-        android:src="@drawable/confirm"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/drinking"
-        app:layout_constraintStart_toStartOf="@+id/drawing"
-        app:layout_constraintTop_toTopOf="@+id/question1"
-        app:layout_constraintVertical_bias="0.189" />
-
-    <ImageView
-        android:id="@+id/imageV2"
-        android:layout_width="207dp"
-        android:layout_height="171dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:alpha="0"
-        android:src="@drawable/disagree"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
-
-    <ImageView
-        android:id="@+id/imageV3"
-        android:layout_width="207dp"
-        android:layout_height="171dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:alpha="0"
-        android:src="@drawable/disagree"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.962"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
-
 </android.support.constraint.ConstraintLayout>
