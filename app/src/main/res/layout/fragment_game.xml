@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment"
+    android:id="@+id/fragmentGame">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal">
+
+       <ImageButton
+           android:id="@+id/img1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:scaleType="fitXY"
+           android:src="@drawable/activity1" />
+
+       <ImageButton
+           android:id="@+id/img2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:scaleType="fitXY"
+           android:src="@drawable/activity1" />
+
+       <ImageButton
+           android:id="@+id/img3"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:scaleType="fitXY"
+           android:src="@drawable/activity1" />
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:alpha="0"
+            android:src="@drawable/confirm"
+            android:visibility="invisible"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:alpha="0"
+            android:src="@drawable/cross"
+            android:visibility="invisible"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/answer3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:alpha="0"
+            android:src="@drawable/confirm"
+            android:visibility="invisible"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
