@@ -75,15 +75,6 @@ public class SecondPage extends AppCompatActivity {
                     }
                 }.start();
 
-                /*Toast.makeText(SecondPage.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                Animation animation = AnimationUtils.loadAnimation(
-                        getApplicationContext(), R.anim.translate);
-                jumping.startAnimation(animation);
-
-                Toast.makeText(SecondPage.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                Animation animation1 = AnimationUtils.loadAnimation(
-                        getApplicationContext(), R.anim.scale);
-                walking.startAnimation(animation1);*/
                 ViewCompat.animate(mImageView).withStartAction(new Runnable(){
                     @Override
                     public void run()
@@ -114,15 +105,6 @@ public class SecondPage extends AppCompatActivity {
                         mpSleepWrong.start();
                     }
                 }.start();
-                /*Toast.makeText(SecondPage.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                Animation animation = AnimationUtils.loadAnimation(
-                        getApplicationContext(), R.anim.translate);
-                sleeping.startAnimation(animation);
-
-                Animation animation1 = AnimationUtils.loadAnimation(
-                        getApplicationContext(), R.anim.scale);
-                walking.startAnimation(animation1);
-                Toast.makeText(SecondPage.this, "Вот правильный ответ!", Toast.LENGTH_SHORT).show();*/
                 ViewCompat.animate(mImageView2).withStartAction(new Runnable(){
                     @Override
                     public void run()
@@ -153,10 +135,6 @@ public class SecondPage extends AppCompatActivity {
                         mpWalkPerfect.start();
                     }
                 }.start();
-               /* Toast.makeText(SecondPage.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                Animation animation = AnimationUtils.loadAnimation(
-                        getApplicationContext(), R.anim.translate);
-                walking.startAnimation(animation);*/
 
                 ViewCompat.animate(mImageView3).withStartAction(new Runnable(){
                     @Override

@@ -1,5 +1,7 @@
 package com.cyberessence.cyberorangeteam.gamewithoutfragments;
 
+import java.util.Random;
+
 public class DataForQuestion {
 
     static int perfect = R.raw.perfect;
@@ -65,5 +67,16 @@ public class DataForQuestion {
 
     public int getAnswer() {
         return answer;
+    }
+
+    //возможно, эти методы не нужны
+    public static DataForQuestion getRandomAction(DataForQuestion[] dataForQuestionsAction) {
+        int random = new Random().nextInt(dataForQuestionsAction.length);
+        return dataForQuestionsAction [random];
+    }
+
+    public static DataForQuestion getRandomFood(DataForQuestion[] dataForQuestionsFood) {
+        int random = new Random().nextInt(dataForQuestionsFood.length);
+        return dataForQuestionsFood[random];
     }
 }
