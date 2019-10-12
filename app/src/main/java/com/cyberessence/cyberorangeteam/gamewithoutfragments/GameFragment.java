@@ -140,7 +140,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    new CountDownTimer(6000,6000){
+                    new CountDownTimer(3000,3000){
                         public void onTick(long millisUntilFinished) {
                             mediaPlayer = MediaPlayer.create(getContext(), R.raw.applause);
                             mediaPlayer.start();
