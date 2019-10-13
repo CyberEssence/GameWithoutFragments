@@ -18,6 +18,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
+import java.util.Random;
 
 
 public class GameFragment extends Fragment implements View.OnClickListener {
@@ -30,6 +31,21 @@ public class GameFragment extends Fragment implements View.OnClickListener {
 
     public void setDataForQuestions(DataForQuestion[] dataForQuestions) {
         this.dataForQuestions = dataForQuestions;
+    }
+
+    /*public void setRandomDataForQuestions(DataForQuestion[] dataForQuestions) {
+        getRandomAction(dataForQuestions);
+        this.dataForQuestions = dataForQuestions;
+    }*/
+
+    public static DataForQuestion getRandomAction(DataForQuestion[] dataForQuestionsAction) {
+        int random = new Random().nextInt(dataForQuestionsAction.length);
+        return dataForQuestionsAction [random];
+    }
+
+    public static DataForQuestion getRandomFood(DataForQuestion[] dataForQuestionsFood) {
+        int random = new Random().nextInt(dataForQuestionsFood.length);
+        return dataForQuestionsFood[random];
     }
 
     public interface onSomeEventListener {
@@ -47,7 +63,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_game, null);
+        View view = inflater.inflate(R.layout.fragment_game, container, false);
 
         img1 = view.findViewById(R.id.img1);
         img2 = view.findViewById(R.id.img2);
@@ -326,4 +342,6 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+
+
 }

@@ -70,7 +70,7 @@ public class DataForQuestion {
     }
 
     //возможно, эти методы не нужны
-    public static DataForQuestion getRandomAction(DataForQuestion[] dataForQuestionsAction) {
+    /*public static DataForQuestion getRandomAction(DataForQuestion[] dataForQuestionsAction) {
         int random = new Random().nextInt(dataForQuestionsAction.length);
         return dataForQuestionsAction [random];
     }
@@ -78,5 +78,5 @@ public class DataForQuestion {
     public static DataForQuestion getRandomFood(DataForQuestion[] dataForQuestionsFood) {
         int random = new Random().nextInt(dataForQuestionsFood.length);
         return dataForQuestionsFood[random];
-    }
+    }*/
 }
