@@ -11,4 +11,5 @@
 
     <string name="game">Игра</string>
     <string name="random_game">Игра "случайные карточки"</string>
+    <string name="choose_mode">Выбрать режим</string>
 </resources>

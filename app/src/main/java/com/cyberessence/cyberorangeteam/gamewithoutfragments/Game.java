@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentContainer;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -40,6 +42,8 @@ public class Game extends AppCompatActivity implements GameFragment.onSomeEventL
     MediaPlayer mpDrinkWrong;
     MediaPlayer mpEatPerfect;
     MediaPlayer mpDrawWrong;
+
+    Button buttonSelectMode;
 
     public void hideNavigator(){
         View decorView =getWindow().getDecorView();
@@ -76,8 +80,6 @@ public class Game extends AppCompatActivity implements GameFragment.onSomeEventL
         fragCount.commit();
 
         hideNavigator();
-
-
 
 
         dir2 = (ImageButton) findViewById(R.id.back);

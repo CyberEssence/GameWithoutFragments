@@ -2,13 +2,16 @@ package com.cyberessence.cyberorangeteam.gamewithoutfragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +22,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 
 public class GameFragment extends Fragment implements View.OnClickListener {
@@ -40,7 +44,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
 
     public static DataForQuestion getRandomAction(DataForQuestion[] dataForQuestionsAction) {
         int random = new Random().nextInt(dataForQuestionsAction.length);
-        return dataForQuestionsAction [random];
+        return dataForQuestionsAction[random];
     }
 
     public static DataForQuestion getRandomFood(DataForQuestion[] dataForQuestionsFood) {
@@ -77,8 +81,6 @@ public class GameFragment extends Fragment implements View.OnClickListener {
         img1.setOnClickListener(this);
         img2.setOnClickListener(this);
         img3.setOnClickListener(this);
-
-
 
         setNewQuestion();
 
@@ -342,6 +344,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+
 
 
 }
