@@ -14,12 +14,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import static java.lang.Thread.sleep;
 
 
-public class SecondPage extends AppCompatActivity {
+public class SecondPageActivity extends AppCompatActivity {
 
     ImageButton dir1;
     ImageButton dir2;
@@ -56,7 +55,7 @@ public class SecondPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(SecondPage.this, MainActivity.class);
+                Intent intent = new Intent(SecondPageActivity.this, MainActivity.class);
                 startActivity(intent);
 
             }
@@ -70,7 +69,7 @@ public class SecondPage extends AppCompatActivity {
             public void onClick(View v) {
                 new Thread() {
                     public void run() {
-                        mpJumpWrong = MediaPlayer.create(SecondPage.this, R.raw.wrong);
+                        mpJumpWrong = MediaPlayer.create(SecondPageActivity.this, R.raw.wrong);
                         mpJumpWrong.start();
                     }
                 }.start();
@@ -87,7 +86,7 @@ public class SecondPage extends AppCompatActivity {
                         .setDuration(250)
                         .start();
 
-                Animation a = AnimationUtils.loadAnimation(SecondPage.this, R.anim.visible);
+                Animation a = AnimationUtils.loadAnimation(SecondPageActivity.this, R.anim.visible);
                 mImageView.startAnimation(a);
             }
         });
@@ -101,7 +100,7 @@ public class SecondPage extends AppCompatActivity {
 
                 new Thread() {
                     public void run() {
-                        mpSleepWrong = MediaPlayer.create(SecondPage.this, R.raw.wrong);
+                        mpSleepWrong = MediaPlayer.create(SecondPageActivity.this, R.raw.wrong);
                         mpSleepWrong.start();
                     }
                 }.start();
@@ -117,7 +116,7 @@ public class SecondPage extends AppCompatActivity {
                         .setDuration(250)
                         .start();
 
-                Animation a = AnimationUtils.loadAnimation(SecondPage.this, R.anim.visible);
+                Animation a = AnimationUtils.loadAnimation(SecondPageActivity.this, R.anim.visible);
                 mImageView2.startAnimation(a);
             }
         });
@@ -131,7 +130,7 @@ public class SecondPage extends AppCompatActivity {
             public void onClick(View v) {
                 new Thread() {
                     public void run() {
-                        mpWalkPerfect = MediaPlayer.create(SecondPage.this, R.raw.perfect);
+                        mpWalkPerfect = MediaPlayer.create(SecondPageActivity.this, R.raw.perfect);
                         mpWalkPerfect.start();
                     }
                 }.start();
@@ -150,7 +149,7 @@ public class SecondPage extends AppCompatActivity {
 
 
 
-                Animation a = AnimationUtils.loadAnimation(SecondPage.this, R.anim.visible);
+                Animation a = AnimationUtils.loadAnimation(SecondPageActivity.this, R.anim.visible);
                 mImageView3.startAnimation(a);
             }
         });

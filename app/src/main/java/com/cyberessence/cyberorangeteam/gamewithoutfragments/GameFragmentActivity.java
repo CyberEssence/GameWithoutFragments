@@ -1,36 +1,28 @@
 package com.cyberessence.cyberorangeteam.gamewithoutfragments;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 
-public class GameFragment extends Fragment implements View.OnClickListener {
+public class GameFragmentActivity extends Fragment implements View.OnClickListener {
 
     ImageButton img1,img2,img3,answer1,answer2,answer3;
     int currentBtnPressed;
     int currentQuestion = 0;
-    static int animDur = 3000;
+    static int animDuration = 3000;
     DataForQuestion[] dataForQuestions;
 
     public void setDataForQuestions(DataForQuestion[] dataForQuestions) {
@@ -58,7 +50,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
 
     private onSomeEventListener mListener;
 
-    public GameFragment() {
+    public GameFragmentActivity() {
         // Required empty public constructor
     }
 
@@ -195,11 +187,11 @@ public class GameFragment extends Fragment implements View.OnClickListener {
             case 1:
                     if (currentBtnPressed ==  dataForQuestions[currentQuestion].getAnswer()){
                         answer1.setImageResource(R.drawable.tick);
-                        animDur = 4000;
+                        animDuration = 4000;
 
                     } else {
                         answer1.setImageResource(R.drawable.cross);
-                        animDur = 2500;
+                        animDuration = 2500;
                     }
 
 
@@ -212,7 +204,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                 })
                         .alpha(1f)
                         .setInterpolator(new AccelerateDecelerateInterpolator())
-                        .setDuration(animDur)
+                        .setDuration(animDuration)
                         .start();
 
 
@@ -228,7 +220,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                         })
                                 .alpha(0f)
                                 .setInterpolator(new AccelerateDecelerateInterpolator())
-                                .setDuration(animDur)
+                                .setDuration(animDuration)
                                 .start();
 
                         handler.postDelayed(new Runnable() {
@@ -239,17 +231,17 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                             }
                         },2500);
                     }
-                },animDur);
+                }, animDuration);
 
                 break;
             case 2:
                 if (currentBtnPressed ==  dataForQuestions[currentQuestion].getAnswer()){
                     answer2.setImageResource(R.drawable.tick);
-                    animDur = 4000;
+                    animDuration = 4000;
 
                 } else {
                     answer2.setImageResource(R.drawable.cross);
-                    animDur = 2500;
+                    animDuration = 2500;
                 }
 
                 ViewCompat.animate(answer2).withStartAction(new Runnable(){
@@ -261,7 +253,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                 })
                         .alpha(1f)
                         .setInterpolator(new AccelerateDecelerateInterpolator())
-                        .setDuration(animDur)
+                        .setDuration(animDuration)
                         .start();
 
 
@@ -277,7 +269,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                         })
                                 .alpha(0f)
                                 .setInterpolator(new AccelerateDecelerateInterpolator())
-                                .setDuration(animDur)
+                                .setDuration(animDuration)
                                 .start();
 
                         handler.postDelayed(new Runnable() {
@@ -288,18 +280,18 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                             }
                         },2500);
                     }
-                },animDur);
+                }, animDuration);
 
 
                 break;
             case 3:
                 if (currentBtnPressed ==  dataForQuestions[currentQuestion].getAnswer()){
                     answer3.setImageResource(R.drawable.tick);
-                    animDur = 4000;
+                    animDuration = 4000;
 
                 } else {
                     answer3.setImageResource(R.drawable.cross);
-                    animDur = 2500;
+                    animDuration = 2500;
                 }
                 ViewCompat.animate(answer3).withStartAction(new Runnable(){
                     @Override
@@ -310,7 +302,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                 })
                         .alpha(1f)
                         .setInterpolator(new AccelerateDecelerateInterpolator())
-                        .setDuration(animDur)
+                        .setDuration(animDuration)
                         .start();
 
 
@@ -326,7 +318,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                         })
                                 .alpha(0f)
                                 .setInterpolator(new AccelerateDecelerateInterpolator())
-                                .setDuration(animDur)
+                                .setDuration(animDuration)
                                 .start();
 
                         handler.postDelayed(new Runnable() {
@@ -337,7 +329,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                             }
                         },2500);
                     }
-                },animDur);
+                }, animDuration);
 
 
 

@@ -2,20 +2,13 @@ package com.cyberessence.cyberorangeteam.gamewithoutfragments;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.media.MediaPlayer;
 import android.support.v4.app.FragmentContainer;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     ImageButton questionAction,questionFood ;
     FragmentContainer fragCount;
@@ -35,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         questionAction.setOnClickListener(new View.OnClickListener() {
             @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, Game.class);
+                    Intent intent = new Intent(MainActivity.this, GameActivity.class);
                     intent.putExtra("typeQuestion", "Action");
                     startActivity(intent);
 
@@ -47,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         questionFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Game.class);
+                Intent intent = new Intent(MainActivity.this, GameActivity.class);
                 intent.putExtra("typeQuestion", "Food");
                 startActivity(intent);
 

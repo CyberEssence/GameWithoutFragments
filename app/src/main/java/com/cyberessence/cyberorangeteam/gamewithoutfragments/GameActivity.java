@@ -1,12 +1,7 @@
 package com.cyberessence.cyberorangeteam.gamewithoutfragments;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentContainer;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -14,18 +9,13 @@ import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Game extends AppCompatActivity implements GameFragment.onSomeEventListener{
+public class GameActivity extends AppCompatActivity implements GameFragmentActivity.onSomeEventListener{
     ImageButton dir1;
     ImageButton dir2;
 
@@ -33,7 +23,7 @@ public class Game extends AppCompatActivity implements GameFragment.onSomeEventL
     ImageButton drinking;
     ImageButton eating;
 
-    GameFragment gameFragment;
+    GameFragmentActivity gameFragmentActivity;
     FragmentTransaction fragCount;
 
     TextView question1;
@@ -72,14 +62,14 @@ public class Game extends AppCompatActivity implements GameFragment.onSomeEventL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        gameFragment = new GameFragment();
+        gameFragmentActivity = new GameFragmentActivity();
 
         Intent intent = getIntent();
 
         someEvent(intent.getStringExtra("typeQuestion"));
 
         fragCount = getSupportFragmentManager().beginTransaction();
-        fragCount.add(R.id.fragCount,gameFragment);
+        fragCount.add(R.id.fragCount, gameFragmentActivity);
         fragCount.commit();
 
         hideNavigator();
@@ -109,8 +99,8 @@ public class Game extends AppCompatActivity implements GameFragment.onSomeEventL
     public void someEvent(String type) {
 
             if(DataForQuestion.dataForQuestionsAction[0].getType().equals(type))
-            gameFragment.setDataForQuestions(DataForQuestion.dataForQuestionsAction);
-            else gameFragment.setDataForQuestions(DataForQuestion.dataForQuestionsFood);
+            gameFragmentActivity.setDataForQuestions(DataForQuestion.dataForQuestionsAction);
+            else gameFragmentActivity.setDataForQuestions(DataForQuestion.dataForQuestionsFood);
 
 
     }

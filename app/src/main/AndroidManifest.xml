@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SecondPage"  android:screenOrientation="landscape"></activity>
-        <activity android:name=".Game"  android:screenOrientation="landscape"/>
+        <activity android:name=".SecondPageActivity"  android:screenOrientation="landscape"></activity>
+        <activity android:name=".GameActivity"  android:screenOrientation="landscape"/>
         <activity android:name=".MainActivity" android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
